@@ -5,8 +5,8 @@
   "scripts": {
     "test": "playwright test",
     "test:ui": "playwright test --ui",
-    "report:allure:generate":"npx allure generate  --clean ./test-report/allure-results -o ./test-report/allure-report",
-    "report:allure": "npx allure open test-report/allure-report"
+    "report:allure:generate":"npx allure generate  --clean ./reports/allure-results -o ./reports/allure-report",
+    "report:allure": "npx allure open ./reports/allure-report"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +20,7 @@
     "ajv": "^8.17.1",
     "dotenv": "^17.2.1",
     "winston": "^3.17.0",
-    "allure-playwright": "^3.15.0"
+    "allure-commandline": "^2.34.1",
+    "allure-playwright": "^3.10.2"
   }
 }
