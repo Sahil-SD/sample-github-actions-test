@@ -1,0 +1,49 @@
+name: Playwright Tests
+on:
+  push:
+    branches: [ main, master, develop, feature/** ]
+  pull_request:
+    branches: [ main, master, develop, feature/** ]
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: lts/*
+    - name: Install dependencies
+      run: npm ci
+    - name: Install Playwright Browsers
+      run: npx playwright install
+    - name: Run Playwright tests
+      run: npx playwright test
+    - name: Generate Allure Report
+      run: npm run report:allure:generate
+    - uses: actions/upload-artifact@v4
+      if: ${{ always() }}
+      with:
+        name: playwright-report
+        path: reports/html-report
+        retention-days: 10
+    - uses: actions/upload-artifact@v4
+      if: ${{ always() }}
+      with:
+        name: allure-report
+        path: test-report/allure-report
+        retention-days: 10
+    - name: Combine Reports
+      if: ${{ always() }}
+      run: sh ./.github/workflows/scripts/report-combiner.sh
+    - name: Deploy Combined Report
+      if: ${{ always() }}
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./reports/combined-pages
+        destination_dir: ${{ github.run_number }}
+    - name: Display Combined Report URL
+      if: ${{ always() }}
+      run: |
+        echo "Combined report available at: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/${{ github.run_number }}"

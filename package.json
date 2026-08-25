@@ -1,0 +1,25 @@
+{
+  "name": "api-ui-automation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "report:allure:generate":"npx allure generate  --clean ./test-report/allure-results -o ./test-report/allure-report",
+    "report:allure": "npx allure open test-report/allure-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^26.3.0"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "dotenv": "^17.2.1",
+    "winston": "^3.17.0",
+    "allure-playwright": "^3.4.0"
+  }
+}
