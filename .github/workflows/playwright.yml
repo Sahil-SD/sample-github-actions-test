@@ -38,7 +38,7 @@ jobs:
       if: ${{ always() }}
       with:
         name: allure-report
-        path: test-report/allure-report
+        path: reports/allure-report
         retention-days: 10
     - name: Combine Reports
       if: ${{ always() }}
