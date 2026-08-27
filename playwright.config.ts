@@ -50,6 +50,6 @@ export default defineConfig({
   webServer: {
     command: 'npm run start',
     url: process.env.BASE_URL || 'https://www.saucedemo.com',
-    reuseExistingServer: !process.env.CI,
+    reuseExistingServer: true,
   },
 });
