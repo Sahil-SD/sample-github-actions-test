@@ -1,0 +1,14 @@
+[2026-08-27T06:35:22.082Z] [INFO] Running test with user: standard_user
+[2026-08-27T06:35:22.083Z] [INFO] [BUSINESS KEYWORD] Logging in as user: standard_user
+[2026-08-27T06:35:22.083Z] [INFO] Navigating to: 
+[2026-08-27T06:35:22.357Z] [INFO] Verifying element is visible
+[2026-08-27T06:35:22.393Z] [INFO] Filling text: standard_user
+[2026-08-27T06:35:22.409Z] [INFO] Filling text: secret_sauce
+[2026-08-27T06:35:22.426Z] [INFO] Clicking element
+[2026-08-27T06:35:22.502Z] [INFO] [BUSINESS KEYWORD] Verifying dashboard is loaded
+[2026-08-27T06:35:22.502Z] [INFO] Verifying element is visible
+[2026-08-27T06:35:22.524Z] [INFO] [BUSINESS KEYWORD] Adding 2 product(s) to cart
+[2026-08-27T06:35:22.524Z] [INFO] Clicking element
+[2026-08-27T06:35:22.566Z] [INFO] Clicking element
+[2026-08-27T06:35:22.614Z] [INFO] [BUSINESS KEYWORD] Verifying cart count: 2
+[2026-08-27T06:35:22.620Z] [INFO] ✓ Test passed

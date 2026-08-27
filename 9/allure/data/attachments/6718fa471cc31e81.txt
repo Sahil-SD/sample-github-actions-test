@@ -1,0 +1,5 @@
+[2026-08-27T06:35:24.746Z] [INFO] Navigating to: 
+[2026-08-27T06:35:24.984Z] [INFO] TEST: TC003 - Empty password validation
+[2026-08-27T06:35:24.985Z] [INFO] Filling text: standard_user
+[2026-08-27T06:35:25.021Z] [INFO] Clicking element
+[2026-08-27T06:35:25.110Z] [INFO] ✓ Test passed

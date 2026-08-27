@@ -1,0 +1,6 @@
+[2026-08-27T06:35:24.211Z] [INFO] Navigating to: 
+[2026-08-27T06:35:24.445Z] [INFO] TEST: TC002 - Login with invalid credentials
+[2026-08-27T06:35:24.446Z] [INFO] Filling text: invalid_user
+[2026-08-27T06:35:24.483Z] [INFO] Filling text: invalid_pass
+[2026-08-27T06:35:24.496Z] [INFO] Clicking element
+[2026-08-27T06:35:24.561Z] [INFO] ✓ Test passed

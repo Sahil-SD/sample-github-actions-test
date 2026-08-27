@@ -1,0 +1,6 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","769","User can add products and proceed to checkout","chromium","2026-08-27","passed","2026-08-27","Checkout Tests - Data Driven > Tests for standard_user","e2e/checkout.spec.ts","",""
+"","525","TC003: Empty password field validation","chromium","2026-08-27","passed","2026-08-27","Login Tests","e2e/login.spec.ts","",""
+"","510","TC002: Login with invalid credentials","chromium","2026-08-27","passed","2026-08-27","Login Tests","e2e/login.spec.ts","",""
+"","615","TC001: Successful login with valid credentials","chromium","2026-08-27","passed","2026-08-27","Login Tests","e2e/login.spec.ts","",""
+"","706","User can add products and proceed to checkout","chromium","2026-08-27","passed","2026-08-27","Checkout Tests - Data Driven > Tests for visual_user","e2e/checkout.spec.ts","",""

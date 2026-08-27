@@ -1,0 +1,8 @@
+[2026-08-27T06:35:23.581Z] [INFO] Navigating to: 
+[2026-08-27T06:35:23.814Z] [INFO] TEST: TC001 - Successful login
+[2026-08-27T06:35:23.814Z] [INFO] Filling text: standard_user
+[2026-08-27T06:35:23.852Z] [INFO] Filling text: secret_sauce
+[2026-08-27T06:35:23.862Z] [INFO] Clicking element
+[2026-08-27T06:35:23.965Z] [INFO] Verifying element is visible
+[2026-08-27T06:35:23.978Z] [INFO] Verifying element is visible
+[2026-08-27T06:35:23.989Z] [INFO] ✓ Test passed
