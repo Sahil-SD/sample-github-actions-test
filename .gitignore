@@ -8,3 +8,4 @@ reports/
 /playwright/.cache/
 /playwright/.auth/
 /logs/
+/storage/auth/

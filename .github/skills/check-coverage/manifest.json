@@ -1,0 +1,87 @@
+{
+  "flows": [
+    {
+      "flow": "API_gamesList",
+      "type": "API",
+      "file": "test/games-list/api-games-list.spec.ts",
+      "class": "GameListApi",
+      "columns": [
+        "DataID",
+        "GameID",
+        "InputValidity",
+        "TestCategory",
+        "ExpectedHTTPStatus"
+      ]
+    },
+    {
+      "flow": "API_dealsLookup",
+      "type": "API",
+      "file": "test/deals-lookup/api-deals-lookup.spec.ts",
+      "class": "DealsApi",
+      "columns": [
+        "DataID",
+        "DealID",
+        "InputValidity",
+        "TestCategory",
+        "ExpectedHTTPStatus"
+      ]
+    }
+  ],
+  "utilities": [
+    {
+      "name": "Logger",
+      "path": "core/logger.ts",
+      "purpose": "Winston singleton logger shared across tests and core services"
+    },
+    {
+      "name": "HttpClient",
+      "path": "core/http-client.ts",
+      "purpose": "shared HTTP client wrapper for Playwright request context"
+    },
+    {
+      "name": "ConfigLoader",
+      "path": "core/config-loader.ts",
+      "purpose": "loads environment JSON config and .env secret values"
+    },
+    {
+      "name": "Fixtures",
+      "path": "core/fixtures.ts",
+      "purpose": "custom Playwright fixtures that inject business models, config, logger, response handler, and schema validator"
+    },
+    {
+      "name": "ApiEndpoints",
+      "path": "core/endpoints.ts",
+      "purpose": "environment-invariant API endpoint path constants"
+    },
+    {
+      "name": "ApiResponseHandler",
+      "path": "core/api-response-handler.ts",
+      "purpose": "shared API response correctness checks for status code, content type, and body assertions"
+    },
+    {
+      "name": "CsvLoader",
+      "path": "core/csv-loader.ts",
+      "purpose": "generic CSV loader returning dynamic Record<string, string>[] rows"
+    },
+    {
+      "name": "SchemaValidator",
+      "path": "core/schema-validator.ts",
+      "purpose": "shared Ajv wrapper for JSON schema validation"
+    },
+    {
+      "name": "DateUtils",
+      "path": "core/date-utils.ts",
+      "purpose": "timestamp and random suffix generator for unique test data"
+    }
+  ],
+  "schemas": [
+    {
+      "flow": "API_gamesList",
+      "path": "schemas/API_gamesList.schema.json"
+    },
+    {
+      "flow": "API_dealsLookup",
+      "path": "schemas/API_dealsLookup.schema.json"
+    }
+  ]
+}

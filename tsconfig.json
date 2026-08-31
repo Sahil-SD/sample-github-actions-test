@@ -8,8 +8,30 @@
     "resolveJsonModule": true,
     "types": ["node", "@playwright/test"],
     "skipLibCheck": true,
-    "outDir": "dist"
+    "outDir": "dist",
+    "rootDir": ".",
+    "baseUrl": ".",
+    "ignoreDeprecations": "6.0",
+    "lib": ["ES2022"],
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "paths": {
+      "@config/*": ["src/config/*"],
+      "@core/*": ["src/core/*"],
+      "@locators/*": ["src/locators/*"],
+      "@pages/*": ["src/pages/*"],
+      "@api/*": ["src/api/*"],
+      "@data/*": ["src/data/*"],
+      "@utils/*": ["src/utils/*"],
+      "@fixtures/*": ["src/core/fixtures/*"],
+      "@keywords/*": ["src/core/keywords/*"],
+      "@reporters/*": ["src/reporters/*"]
+    },
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   },
-  "include": ["src/**/*.ts", "tests/**/*.ts", "playwright.config.ts"],
+  "include": ["src/**/*", "tests/**/*", "global-setup.ts", "global-teardown.ts"],
   "exclude": ["node_modules", "reports", "dist"]
 }
