@@ -158,6 +158,11 @@ export class UIKeywords {
   }
 
   // Wait Keywords
+  async waitForTimeout(timeout: number = 1_000): Promise<void> {
+    logger.info(`Keyword: Wait for timeout ${timeout}ms`);
+    await this.page.waitForTimeout(timeout);
+  }
+
   async waitForPageLoad(): Promise<void> {
     logger.info('Keyword: Wait for page load');
     await this.page.waitForLoadState('networkidle');
@@ -344,6 +349,12 @@ export function registerUIKeywords(page: Page): UIKeywords {
       parameters: ['expectedMessage'],
       execute: (expectedMessage: unknown) =>
         ui.verifyErrorMessage(expectedMessage as string),
+    },
+    {
+      name: 'WAIT_FOR_TIMEOUT',
+      description: 'Wait for a specified timeout',
+      parameters: ['timeout'],
+      execute: (timeout: unknown) => ui.waitForTimeout(timeout as number),
     },
     {
       name: 'WAIT_FOR_PAGE_LOAD',

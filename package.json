@@ -14,7 +14,7 @@
     "test:debug": "playwright test --debug",
     "test:report": "playwright show-report",
     "test:allure": "allure generate ./allure-results --clean && allure open",
-    "clean": "rimraf dist reports logs allure-results storage/auth/*.json",
+    "clean": "rimraf dist reports logs allure-results storage/auth/",
     "compile": "tsc --noEmit",
     "lint": "eslint src tests --ext .ts",
     "lint:fix": "eslint src tests --ext .ts --fix",
